@@ -48,10 +48,10 @@ jobs:
           workspaces: rust/hhat_lang
       - name: cargo check
         working-directory: rust/hhat_lang
-        run: cargo check --all-targets
+        run: cargo check --all-targets --locked
       - name: cargo fmt
         working-directory: rust/hhat_lang
         run: cargo fmt --check
       - name: cargo clippy
         working-directory: rust/hhat_lang
-        run: cargo clippy --all-targets -- -D warnings
+        run: cargo clippy --all-targets --locked -- -D warnings

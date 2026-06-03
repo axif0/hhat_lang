@@ -46,7 +46,7 @@ jobs:
           workspaces: rust/hhat_lang
       - name: cargo build
         working-directory: rust/hhat_lang
-        run: cargo build --all-targets
+        run: cargo build --all-targets --locked
       - name: cargo test
         working-directory: rust/hhat_lang
-        run: cargo test --all-targets
+        run: cargo test --all-targets --locked
