@@ -230,11 +230,8 @@ mod tests {
     use std::path::PathBuf;
     use crate::ir::project::SourceProject;
 
-    /// TODO: replace the python path for an independent place to retrieve
-    ///  hat code for debugging and checking purposes.
-    ///
     /// Common path containing hat files for test purposes.
-    const PATH: &str = "../../python/tests/dialects/heather/parsing/parse-test/";
+    const PATH: &str = "tests/fixtures/";
 
     #[test]
     fn check_project_source() {

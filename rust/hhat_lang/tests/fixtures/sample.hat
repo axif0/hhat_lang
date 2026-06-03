@@ -1,0 +1,8 @@
+fn floor (x:f64) i64 {
+    xi:i64 = x*i64
+    ::if(and(ltz(x) ne(x xi*f64)):sub(xi 1) true:xi)
+}
+
+fn add-one (n:i64) i64 {
+    ::add(n 1)
+}
