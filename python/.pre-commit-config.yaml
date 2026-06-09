@@ -3,11 +3,14 @@ repos:
     rev: v5.0.0
     hooks:
       - id: end-of-file-fixer
+        files: ^python/
       - id: check-added-large-files
+        files: ^python/
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.18.1
     hooks:
       - id: mypy
+        files: ^python/src/
         args: [
           --ignore-missing-imports,
           --disable-error-code, attr-defined,
@@ -20,8 +23,10 @@ repos:
     rev: "v0.14.9"
     hooks:
       - id: ruff-check
+        files: ^python/
         args: [--fix, --show-fixes, --show-files]
       - id: ruff-format
+        files: ^python/
         args: [--line-length=100]
 
 default_language_version:

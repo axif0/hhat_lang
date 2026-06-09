@@ -17,12 +17,8 @@ impl HIRModule {
         todo!()
     }
 
-    fn string_to_vec(path_str: &String) -> Vec<String> {
-        let x: Vec<String> = path_str
-            .split("/")
-            .filter_map(|x| Some(String::from(x)))
-            .collect();
-        x
+    fn string_to_vec(path_str: &str) -> Vec<String> {
+        path_str.split("/").map(String::from).collect()
     }
 }
 

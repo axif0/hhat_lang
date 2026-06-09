@@ -1,6 +1,11 @@
-#![allow(dead_code, unused)]
+#![allow(
+    dead_code,
+    unused,
+    clippy::upper_case_acronyms,
+    clippy::large_enum_variant,
+    clippy::enum_variant_names
+)]
 
-use peg;
 use std::collections::HashMap;
 
 mod backends;

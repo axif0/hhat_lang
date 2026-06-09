@@ -36,11 +36,11 @@ impl SourceProject {
     fn get_modules(path: &str) -> Vec<SourceModule> {
         SourceProject::get_files(path)
             .into_iter()
-            .filter_map(|f| {
-                Some(SourceModule::new(
+            .map(|f| {
+                SourceModule::new(
                     f.to_str()
                         .expect("could not get module source path from {path}"),
-                ))
+                )
             })
             .collect::<Vec<SourceModule>>()
     }
@@ -84,7 +84,7 @@ pub struct SourceModule {
 impl SourceModule {
     pub fn new(path: &str) -> Self {
         if !path.is_empty() {
-            return match SourceModule::read_file(&path) {
+            return match SourceModule::read_file(path) {
                 Ok(raw_code) => {
                     let path_buf = PathBuf::from(path);
                     if path_buf.is_file() {
