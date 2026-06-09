@@ -79,9 +79,13 @@ Issues = "https://github.com/hhat-lang/hhat_lang/issues"
 Documentation = "https://docs.hhat-lang.org"
 
 [tool.pytest.ini_options]
+testpaths = ["tests"]
 addopts = [
     "--import-mode=importlib",
 ]
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.ruff]
 lint.select = ["E", "F", "I", "Q"]

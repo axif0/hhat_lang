@@ -47,7 +47,7 @@ jobs:
           cache: pip
       - name: Install dependencies
         working-directory: python
-        run: pip install ".[all,dev]"
+        run: pip install ".[dev]"
       - name: Run pytest
         working-directory: python
-        run: pytest .
+        run: pytest tests/
