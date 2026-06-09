@@ -9,13 +9,13 @@ from typing import Any
 from hhat_lang.toolchain.project import (
     DOCS_FOLDER_NAME,
     DOCS_TYPES_PATH,
+    IMPORTS_FOLDER_NAME,
+    IMPORTS_PATH,
     MAIN_DOC_FILE_NAME,
     MAIN_FILE_NAME,
     SOURCE_FOLDER_NAME,
     SOURCE_TYPES_PATH,
-    IMPORTS_FOLDER_NAME,
     TESTS_FOLDER_NAME,
-    IMPORTS_PATH,
 )
 from hhat_lang.toolchain.project.utils import str_to_path
 

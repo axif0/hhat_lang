@@ -2,13 +2,13 @@ from __future__ import annotations
 
 from typing import Any
 
-from arpeggio import Kwd, EOF, OneOrMore, Optional, ZeroOrMore
+from arpeggio import EOF, Kwd, OneOrMore, Optional, ZeroOrMore
 
 from hhat_lang.dialects.heather.grammar.fn_grammar import imports
 from hhat_lang.dialects.heather.grammar.generic_grammar import (
-    simple_id,
-    full_id,
     expr,
+    full_id,
+    simple_id,
 )
 
 

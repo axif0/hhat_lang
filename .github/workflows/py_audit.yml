@@ -49,7 +49,7 @@ jobs:
           cache: pip
       - name: Install package
         working-directory: python
-        run: pip install ".[all,dev]"
+        run: pip install .
       - name: Run pip-audit
         uses: pypa/gh-action-pip-audit@v1.1.0
         with:

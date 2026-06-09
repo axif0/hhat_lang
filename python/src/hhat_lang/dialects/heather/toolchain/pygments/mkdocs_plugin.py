@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from mkdocs.plugins import BasePlugin
 from mkdocs.config import config_options as c
+from mkdocs.plugins import BasePlugin
 from pygments.formatters.html import HtmlFormatter
 
 

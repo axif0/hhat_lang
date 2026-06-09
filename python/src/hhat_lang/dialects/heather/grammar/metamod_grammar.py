@@ -2,12 +2,13 @@ from __future__ import annotations
 
 from typing import Any
 
-from arpeggio import Kwd, EOF, OneOrMore, Optional, ZeroOrMore, RegExMatch as _
+from arpeggio import EOF, Kwd, OneOrMore, Optional, ZeroOrMore
+from arpeggio import RegExMatch as _
 
 from hhat_lang.dialects.heather.grammar.generic_grammar import (
-    trait_name_id,
-    simple_id,
     modifier,
+    simple_id,
+    trait_name_id,
 )
 from hhat_lang.dialects.heather.grammar.type_grammar import typeimport
 

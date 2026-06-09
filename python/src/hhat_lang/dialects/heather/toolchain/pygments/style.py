@@ -2,15 +2,15 @@ from __future__ import annotations
 
 from pygments.style import Style
 from pygments.token import (
-    Token,
     Comment,
     Keyword,
+    Literal,
     Name,
+    Number,
     Operator,
     Punctuation,
     String,
-    Literal,
-    Number,
+    Token,
 )
 
 

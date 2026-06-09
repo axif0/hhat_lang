@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import pytest
 from pygments.token import (
     Comment,
@@ -9,6 +11,7 @@ from pygments.token import (
     Punctuation,
     String,
 )
+
 from hhat_lang.dialects.heather.toolchain.pygments.lexer import HhatLexer
 
 
@@ -20,9 +23,7 @@ def lexer():
 
 def get_tokens(lexer, code):
     """Convert code to a list of token type and value tuples, excluding whitespace."""
-    return [
-        (t, v) for t, v in lexer.get_tokens(code) if str(t) != "Token.Text.Whitespace"
-    ]
+    return [(t, v) for t, v in lexer.get_tokens(code) if str(t) != "Token.Text.Whitespace"]
 
 
 def test_type_definitions(lexer):

@@ -10,10 +10,10 @@ from rich.console import Console
 from rich.panel import Panel
 
 from hhat_lang.toolchain.project.new import (
+    create_new_const_file,
     create_new_fn_file,
     create_new_project,
     create_new_type_file,
-    create_new_const_file,
 )
 from hhat_lang.toolchain.project.run import run_project
 from hhat_lang.toolchain.project.utils import get_proj_dir
