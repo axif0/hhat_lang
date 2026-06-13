@@ -22,7 +22,7 @@ jobs:
     outputs:
       has_rust: ${{ steps.check.outputs.has_rust }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - id: check
         run: |
           if [ -d "rust" ] && find rust -name "*.rs" | grep -q .; then
@@ -41,12 +41,12 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest]
     steps:
-      - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@1.90
+      - uses: actions/checkout@v5
+      - name: Install Rust toolchain
+        working-directory: rust/hhat_lang
+        run: rustup show
       - name: Install cargo-audit
-        uses: taiki-e/install-action@v2
-        with:
-          tool: cargo-audit
+        run: cargo install cargo-audit --locked
       - name: Generate lockfile if missing
         working-directory: rust/hhat_lang
         run: |
