@@ -6,6 +6,8 @@
     clippy::enum_variant_names
 )]
 
+// CI demo: rust workflow trigger
+
 use std::collections::HashMap;
 
 mod backends;
