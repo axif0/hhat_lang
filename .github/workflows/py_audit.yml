@@ -22,7 +22,7 @@ jobs:
     outputs:
       has_python: ${{ steps.check.outputs.has_python }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - id: check
         run: |
           if [ -d "python" ] && find python -name "*.py" | grep -q .; then
@@ -42,16 +42,16 @@ jobs:
         os: [ubuntu-latest, macos-latest]
         python-version: ["3.12", "3.13"]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
           cache: pip
-      - name: Install package
+      - name: Install package and pip-audit
         working-directory: python
-        run: pip install .
+        run: |
+          pip install .
+          pip install pip-audit
       - name: Run pip-audit
-        uses: pypa/gh-action-pip-audit@v1.1.0
-        with:
-          inputs: python/
-          vulnerability-service: osv
+        working-directory: python
+        run: pip-audit --vulnerability-service osv
